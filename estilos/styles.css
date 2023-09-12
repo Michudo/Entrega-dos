@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  background-color: #000000;
+  gap: 10%;
+  height: 15vh;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  padding: 3vh;
+}
+.logo img {
+  height: 10vh;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 6rem;
+}
+.nav-list li a {
+  color: white;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2vh;
+}
+
+.abrir-menu,
+.cerrar-menu {
+  display: none;
+}
+
+
+@media (max-width: 480px) {
+  header {
+    height: 10vh;
+    gap: 30%;
+  }
+  .logo img {
+    height: 5vh;
+  }
+  /* menu hamburguesa */
+  .abrir-menu,
+  .cerrar-menu {
+    display: block;
+    border: 0;
+    font-size: 1.25rem;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .abrir-menu {
+    color: white;
+  }
+  .cerrar-menu {
+    color: black;
+  }
+  .nav {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    padding: 2rem;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+  }
+  .nav.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  .nav-list {
+    flex-direction: column;
+    align-items: end;
+    gap: 2rem;
+  }
+  .nav-list li a {
+    color: black;
+    font-size: 2vh;
+  }
+}
+.ft {
+  display: flex;
+  flex-direction: column;
+  height: 25vh;
+  width: 100vw;
+  background-color: black;
+  justify-content: center;
+}
+.ft__contacto {
+  display: flex;
+  height: 5vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  color: white;
+}
+.ft__lista {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 10px;
+  margin-left: 5%;
+}
+.ft__lista li {
+  display: flex;
+  flex-direction: row;
+  gap: 1%;
+}
+.ft__lista li a {
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+
+.bi-whatsapp {
+  font-size: 30px;
+  color: white;
+}
+
+.bi-instagram {
+  font-size: 30px;
+  color: white;
+}
+
+.bi-envelope {
+  font-size: 30px;
+  color: white;
+}
+
+@media (max-width: 480px) {
+  .ft {
+    height: 25vh;
+    width: 160vw;
+  }
+  .ft__contacto {
+    height: 5vh;
+    width: 100vw;
+    font-size: 25px;
+    align-items: start;
+  }
+  .ft__lista {
+    align-items: start;
+    gap: 20px;
+  }
+  .ft__lista li {
+    gap: 10%;
+  }
+  .ft__lista li a {
+    font-size: 15px;
+  }
+  .bi-whatsapp {
+    font-size: 20px;
+  }
+  .bi-instagram {
+    font-size: 20px;
+  }
+  .bi-envelope {
+    font-size: 20px;
+  }
+}
+.paginaprincipal {
+  display: flex;
+  flex-direction: column;
+  height: 85vh;
+  background-image: url(../imagenes/photomaquillaje.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.boton {
+  display: flex;
+  flex-direction: column;
+  height: 47vh;
+  width: 100vw;
+  justify-content: end;
+  padding-left: 9%;
+}
+.boton__text {
+  display: flex;
+  height: 18%;
+  width: 19%;
+  align-items: center;
+  justify-content: center;
+  border: #184B10 solid;
+  border-width: 1px;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  color: #193643;
+}
+
+@media (max-width: 480px) {
+  .paginaprincipal {
+    height: 90vh;
+    background-image: url(/Proyecto/imagenes/photomaquillajechica.jpg);
+    background-size: 100%;
+  }
+  .boton {
+    height: 45vh;
+  }
+  .boton__text {
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+  }
+}
+.galeria {
+  display: flex;
+  justify-content: center;
+}
+.galeria__contenedor {
+  display: grid;
+  width: 80%;
+  height: 85vh;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 37vh;
+  grid-gap: 2%;
+  padding: 2%;
+}
+.galeria__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=styles.css.map */

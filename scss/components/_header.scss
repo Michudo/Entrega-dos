@@ -1,0 +1,100 @@
+header {
+    display: flex;
+    background-color: #000000;
+    gap: 10%;
+    height: 15vh;
+    align-items: center;
+  }
+
+
+  .logo {
+    display: flex;
+    align-items: center;
+    padding: 3vh;
+
+    img {
+    height: 10vh;
+    }
+  }
+
+  .nav-list {
+    display: flex;
+    list-style: none;
+    gap: 6rem;
+
+    li a{
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2vh;
+    }
+  }
+
+  .abrir-menu,
+  .cerrar-menu {
+    display: none;
+  }
+
+
+  @media (max-width: $breakpoint) {
+
+  header {
+    height: 10vh;
+    gap: 30%;
+  }
+  .logo img{
+    height: 5vh;
+  }
+
+  /* menu hamburguesa */
+
+  .abrir-menu,
+  .cerrar-menu {
+    display: block;
+    border: 0;
+    font-size: 1.25rem;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .abrir-menu {
+    color: white;
+  }
+  
+  .cerrar-menu {
+    color: black;
+  }
+  
+  .nav {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    padding: 2rem;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+  }
+  
+  .nav.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-list {
+  flex-direction: column;
+  align-items: end;
+  gap: 2rem;
+  
+  li a {
+    color: black;
+    font-size: 2vh;
+  }
+}
+
+}

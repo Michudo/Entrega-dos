@@ -1,0 +1,59 @@
+
+.galeria{
+    display: flex;
+    justify-content: center;
+    &__contenedor {
+        display: grid;
+        width: 80%;
+        height: 85vh;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 37vh ;
+        grid-gap: 2%;
+        padding: 2%;
+
+      }
+
+      &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+      }
+    }
+
+
+@media (max-width: $breakpoint){
+  .mitrabajo__footer {
+    display: flex;
+    height: 25vh;
+    width: 100vw;
+    flex-direction: column;
+
+    &__contacto {
+      height: 5vh;
+      width: 100vw;
+      font-size: 25px;
+      align-items: start;
+    }
+    &__lista {
+      align-items: start;
+      gap: 20px;
+    }
+    &__lista li {
+      gap: 10%;
+    }
+    &__lista li a {
+      font-size: 15px;
+    }
+  }
+
+  .bi-whatsapp{
+    font-size: 20px;
+  }
+  .bi-instagram {
+    font-size: 20px;
+  }
+  .bi-envelope {
+    font-size: 20px;
+  }
+}

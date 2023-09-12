@@ -1,0 +1,100 @@
+.ft {
+  display: flex;
+  flex-direction: column;
+  height: 25vh;
+  width: 100vw;
+  background-color: $color-principal;
+  justify-content: center;
+  
+  &__contacto {
+    display: flex;
+    height: 5vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: $color-texto;
+  }
+  &__lista {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 10px;
+    margin-left: 5%;
+  
+    li{
+      display: flex;
+      flex-direction: row;
+      gap: 1%;
+      a{
+      text-decoration: none;
+      font-size: 20px;
+      font-family: 'Montserrat', sans-serif;
+      color: $color-texto;
+      }
+    }
+  }
+}
+
+
+
+.bi-whatsapp{
+  font-size: 30px;
+  color: $color-texto;
+}
+
+.bi-instagram {
+  font-size: 30px;
+  color: $color-texto;
+}
+
+.bi-envelope {
+  font-size: 30px;
+  color: $color-texto;
+}
+
+
+
+
+@media (max-width: $breakpoint) {
+
+  .ft {
+    height: 25vh;
+    width: 160vw;
+
+    &__contacto {
+      height: 5vh;
+      width: 100vw;
+      font-size: 25px;
+      align-items: start;
+    }
+    
+    &__lista {
+      align-items: start;
+      gap: 20px;
+  
+      li {
+        gap: 10%;
+  
+        a {
+          font-size: 15px;
+        }
+  
+      }
+    }
+  }
+
+
+  
+  .bi-whatsapp{
+    font-size: 20px;
+  }
+  
+  .bi-instagram {
+    font-size: 20px;
+  }
+  
+  .bi-envelope {
+    font-size: 20px;
+  }
+}

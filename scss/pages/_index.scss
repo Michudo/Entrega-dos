@@ -1,0 +1,49 @@
+.paginaprincipal{
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+    background-image: url(../imagenes/photomaquillaje.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  .boton {
+    display: flex;
+    flex-direction: column;
+    height: 47vh;
+    width: 100vw;
+    justify-content: end;
+    padding-left: 9%;
+
+    &__text {
+    display: flex;
+    height: 18%;
+    width: 19%;
+    align-items: center;
+    justify-content: center;
+    border: #184B10 solid;
+    border-width: 1px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    color: #193643;
+    }
+  }
+
+    @media (max-width: $breakpoint) {
+    .paginaprincipal {
+        height: 80vh;
+        background-image: url(/Proyecto/imagenes/photomaquillajechica.jpg);
+        background-size: 100%;
+        }
+    .boton {
+        height: 45vh;
+
+        &__text{
+        width: 150px;
+        height: 50px;
+        font-size: 18px;
+      }
+     }
+    }
